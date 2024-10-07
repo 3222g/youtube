@@ -7,24 +7,25 @@
   }
 
   // Function to randomly pause and play the video with randomized intervals
-  function randomPausePlay() {
-    let video = document.querySelector('video');
-    if (video) {
-      // Randomize interval between 3, 4, or 5 minutes
-      let interval = [180000, 240000, 300000][Math.floor(Math.random() * 3)];
+function randomPausePlay() {
+  let video = document.querySelector('video');
+  if (video) {
+    // Randomize interval between 10.3, 12.8, or 14.6 minutes
+    let interval = [618000, 768000, 876000][Math.floor(Math.random() * 3)];
 
-      setInterval(() => {
-        if (!video.paused) {
-          video.pause(); // Pause the video
-          
-          // Randomize the play time between 1, 2, 3, or 4 seconds
-          let randomPlayDelay = [1000, 2000, 3000, 4000][Math.floor(Math.random() * 4)];
-          
-          setTimeout(() => video.play(), randomPlayDelay); // Play it again after the randomized delay
-        }
-      }, interval); // Random interval
-    }
+    setInterval(() => {
+      if (!video.paused) {
+        video.pause(); // Pause the video
+        
+        // Randomize the play time between 1, 2, 3, or 4 seconds
+        let randomPlayDelay = [1000, 2000, 3000, 4000][Math.floor(Math.random() * 4)];
+        
+        setTimeout(() => video.play(), randomPlayDelay); // Play it again after the randomized delay
+      }
+    }, interval); // Random interval between 10.3, 12.8, or 14.6 minutes
   }
+}
+
 
   // Function to skip the video ahead by a random time every random interval
   function randomSkip() {
